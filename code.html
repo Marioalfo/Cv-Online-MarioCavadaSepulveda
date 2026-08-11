@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevPortfolio - Full Stack Developer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#81cc93",
+                        "on-background": "#1e1b17",
+                        "background": "#f2f7f2",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#0f2415",
+                        "primary": "#226630",
+                        "tertiary-fixed": "#d1e0d1",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#1e1c08",
+                        "outline": "#73796e",
+                        "outline-variant": "#c3c8bc",
+                        "surface-container-highest": "#c8d4c8",
+                        "primary-fixed": "#c7edb9",
+                        "on-primary-fixed": "#032102",
+                        "inverse-primary": "#abd19e",
+                        "tertiary-fixed-dim": "#cdc7a8",
+                        "surface-bright": "#f2f7f2",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#605d44",
+                        "surface-container-high": "#d8e3d8",
+                        "on-surface-variant": "#43483f",
+                        "primary-container": "#3b804b",
+                        "surface-container": "#dfebdf",
+                        "surface-variant": "#d8e3d8",
+                        "secondary-fixed": "#e9e1d9",
+                        "on-tertiary-fixed-variant": "#1c4021",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#15331e",
+                        "on-secondary-fixed-variant": "#4a4640",
+                        "surface-tint": "#46673d",
+                        "tertiary-container": "#79755b",
+                        "secondary-container": "#e6ded6",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#1e1b17",
+                        "on-secondary-fixed": "#1e1b16",
+                        "on-primary-fixed-variant": "#2e4e28",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#e4ebe4",
+                        "surface": "#f2f7f2",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#fffbff",
+                        "on-primary-container": "#f8fff0",
+                        "secondary": "#625e57",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#eaf0ea",
+                        "on-secondary-container": "#67625b",
+                        "secondary-fixed-dim": "#ccc5be"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "lg": "3rem",
+                        "xs": "0.5rem",
+                        "md": "1.5rem",
+                        "unit": "4px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "xl": "6rem",
+                        "sm": "1rem"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "code": ["monospace"],
+                        "display-lg": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["30px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "code": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { scroll-behavior: smooth; }
+        .ambient-shadow:hover { box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body class="bg-background text-on-background dark:bg-inverse-surface dark:text-inverse-on-surface font-body-md text-body-md antialiased transition-colors duration-300 relative">
+<div class="pointer-events-none fixed inset-0 z-30 hidden md:block transition-opacity duration-300 opacity-100" id="pointer-glow"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-md md:px-lg h-16 max-w-container-max mx-auto bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md border-b border-outline-variant/30 transition-transform duration-300 ease-in-out" id="main-nav">
+<div class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">DevPortfolio</div>
+<div class="hidden md:flex items-center gap-md font-body-md text-body-md">
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#about">About</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#education">Education</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#experience">Experience</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#projects">Projects</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#contact">Contact</a>
+</div>
+<button aria-label="Toggle Dark Mode" class="cursor-pointer transition-all active:scale-95 text-primary dark:text-primary-fixed-dim p-xs rounded-full hover:bg-surface-variant dark:hover:bg-surface-dim flex items-center justify-center w-10 h-10" id="theme-toggle">
+<span class="material-symbols-outlined transition-transform duration-300" id="theme-icon">dark_mode</span>
+</button>
+</nav>
+<main class="max-w-container-max mx-auto px-4 md:px-lg pt-24 pb-xl relative z-40">
+<!-- Hero Section -->
+<section class="min-h-[80vh] flex flex-col md:flex-row items-center justify-center gap-lg py-xl">
+<div class="flex-1 space-y-md text-center md:text-left z-10">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background dark:text-inverse-on-surface">
+                    Building Scalable Web Solutions
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant dark:text-on-secondary-fixed-variant max-w-2xl mx-auto md:mx-0">
+                    I'm a Full Stack Developer dedicated to crafting elegant, high-performance applications with a focus on clean code and exceptional user experiences.
+                </p>
+<div class="flex flex-col sm:flex-row gap-sm justify-center md:justify-start pt-sm">
+<a class="bg-primary text-on-primary px-lg py-sm rounded-lg font-label-md text-label-md text-center hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm hover:shadow-md" href="#projects">View Work</a>
+<a class="bg-surface-container-high dark:bg-surface-dim text-on-surface dark:text-on-secondary-fixed-variant px-lg py-sm rounded-lg font-label-md text-label-md text-center hover:bg-surface-variant dark:hover:bg-inverse-surface transition-colors border border-outline-variant/50 dark:border-outline/50" href="#">Download Resume</a>
+</div>
+</div>
+<div class="flex-1 w-full max-w-md relative">
+<div class="aspect-square rounded-full overflow-hidden border-4 border-surface dark:border-inverse-surface shadow-xl relative z-10 mx-auto">
+<img alt="Developer Portrait" class="w-full h-full object-cover" data-alt="A professional headshot of a developer in a modern, well-lit workspace. The setting is warm and inviting, featuring soft natural light filtering through a window, illuminating a clean desk with a minimalist setup. The developer exudes calm competence. The color palette emphasizes soft sage greens, warm off-whites, and deep charcoal grey. High resolution, shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW02rqEQDOt0nlDzzlPE2AwKPYNDZqR1EyCoi-mQ9s_JF5ZxiUiSPndiw7ahJ9E28oq6gmoro2opq6dGIJ5Vsclaex9fJybaJ4fPCfkwY1IVJccKF-HJCPQ5rPaWV53T2PzSrQlbETwwBtqY_Wl3xkIc1oX8DM3dl19t8kquh-mhKHvI-zbnUmRL_2AgM25tEQSPoVH6TM0bKWJDbZbGKMVAEi_5uit9LF5UC_YYOzafwVVKgGcLMo"/>
+</div>
+<div class="absolute inset-0 -z-0 bg-primary-fixed-dim/20 rounded-full blur-3xl transform translate-x-4 translate-y-4"></div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-xl scroll-mt-24" id="about">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="col-span-1 md:col-span-5 relative hidden md:block">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-lg border border-outline-variant/30 relative">
+<img alt="Workspace" class="w-full h-full object-cover" data-alt="A meticulously organized developer desk shot from a top-down perspective. Features a mechanical keyboard, a sleek monitor displaying abstract code patterns, and a warm cup of coffee resting on a wooden coaster. Natural sunlight cascades across the scene, highlighting the textures of a sage green notebook. The overall aesthetic is calm, minimalist, and deeply professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa9XI_LTFVL336zL-VcI0dJKAGVckTPCNXnE7JJw1bE7wbS6vLevFfv_kQUNsqpHVm6O2-ewhnHty98dxwlpj6U7o_bPYrJ-3C1TqyAT8Jq7tCBiZWXz7CjZPYAVpgu5k-YLPL5REI5CIC3p2wmTQ3qGurZXFnYloswZZDqS7nCr0JoNEKrMzf9kXSedpDF6SNz4S_wvRcrap1uZH1XgbfXhErgkKHAfUYsFKHRQFKni51mrGluGBg"/>
+</div>
+</div>
+<div class="col-span-1 md:col-span-7 space-y-sm">
+<h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">About Me</h2>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant leading-relaxed">
+                        I am passionate about creating software that solves real-world problems gracefully. With a background in both front-end aesthetics and back-end architecture, I bridge the gap between design and robust functionality. 
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant leading-relaxed">
+                        My approach favors a minimalist philosophy—writing only what is necessary, ensuring maintainability, and focusing heavily on performance and accessibility. I thrive in environments that challenge me to learn and adapt quickly.
+                    </p>
+<div class="pt-sm">
+<h3 class="font-label-md text-label-md text-on-surface dark:text-on-secondary-fixed-variant mb-2 uppercase tracking-widest text-xs">Core Technologies</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-code text-xs border border-tertiary-fixed-dim">JavaScript/TS</span>
+<span class="px-3 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-code text-xs border border-tertiary-fixed-dim">React/Next.js</span>
+<span class="px-3 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-code text-xs border border-tertiary-fixed-dim">Node.js</span>
+<span class="px-3 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-code text-xs border border-tertiary-fixed-dim">Python/Django</span>
+<span class="px-3 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-code text-xs border border-tertiary-fixed-dim">PostgreSQL</span>
+<span class="px-3 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-code text-xs border border-tertiary-fixed-dim">AWS</span>
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-xl scroll-mt-24" id="skills">
+<div class="mb-lg space-y-xs text-center md:text-left">
+<h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Technical Skills</h2>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant">A comprehensive overview of my technical expertise and toolset.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Frontend Card -->
+<div class="p-md bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 ambient-shadow transition-all duration-300 flex flex-col gap-sm">
+<div class="w-10 h-10 text-primary dark:text-primary-fixed-dim">
+<img alt="Frontend Icon" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLvN4rwjF2O4oPH3Fa5viTAlTwkikCosSfvAecukIX1eQFljWp1hWmPeoyF3t2kWL1ef6wjCBdST5PNyAvsSegX8Pc0AkQm5Edz9m_CdHeoPc_CEllIR2hbt8mNrgmf_NXM7gG4Arg5tDjxJBGEW_ZmLThyYwBuv9n7YhchzspIBNewusUkcnTEO23ysps3dcc7HeEuY2A8GPK1aSAYYgIU7eRn1cWeloVCZJOYuBkKvmubLcA4cofiK_gE"/>
+</div>
+<h3 class="font-headline-sm text-lg text-on-surface dark:text-on-secondary-fixed-variant">Frontend</h3>
+<p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">React, Next.js, Tailwind CSS, TypeScript</p>
+</div>
+<!-- Backend Card -->
+<div class="p-md bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 ambient-shadow transition-all duration-300 flex flex-col gap-sm">
+<div class="w-10 h-10 text-primary dark:text-primary-fixed-dim">
+<img alt="Backend Icon" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLvDAS5ftBBgd8S9VRdI0H-6Wg49aan1lBZmnMjeWNqDjoYHTXzaE6-libWTjb3-Zg7N53PIa3zRGB0ly19N8SRW4gvwrf20F5m3D7MhdEwxhabYQJPasmZarJL1IZlkIvkhtWqOTffT30EC-Lv1YQPFVaQ7QBlywmOJRfBqhLUzoeAvObTMFUtyzhk_L3NjVId2chcpkYk8enh722RBlriUJSCnbIsF2K2zx7L3VnK01q7Qmm4OZxJP0w"/>
+</div>
+<h3 class="font-headline-sm text-lg text-on-surface dark:text-on-secondary-fixed-variant">Backend</h3>
+<p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">Node.js, Python, Django, Go</p>
+</div>
+<!-- Database Card -->
+<div class="p-md bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 ambient-shadow transition-all duration-300 flex flex-col gap-sm">
+<div class="w-10 h-10 text-primary dark:text-primary-fixed-dim">
+<img alt="Database Icon" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLurMGZDU9vShYh3AkbbxI_WsqyD9hOo2cGP6Wn9DKUXQ8e-G3vybSmGHqDptBN_kihxVzKsojGQxnH4ed2XRaNoTtmeWBTRBiUXICCK2Unq3SCTa4YDNULjpBLII3u2X0IGyPsZwhhV8StThAebgbHlPyct9RsueUSilHUkcTQ7bkAiJNLfWzndHgtNAFjJw_dtM4FD8aXVDoj3c1lzomDum_gIGHPiQHvMA184UVjthIMDtdV-EsDUpdI"/>
+</div>
+<h3 class="font-headline-sm text-lg text-on-surface dark:text-on-secondary-fixed-variant">Database</h3>
+<p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">PostgreSQL, MongoDB, Redis, Prisma</p>
+</div>
+<!-- Cloud & DevOps Card -->
+<div class="p-md bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 ambient-shadow transition-all duration-300 flex flex-col gap-sm">
+<div class="w-10 h-10 text-primary dark:text-primary-fixed-dim">
+<img alt="Cloud Icon" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLvhVKh0HzIanreHtKbC5IUsSx0gE9HfqZ13N7T4KxR7Jg0pJPfoxSyj3tNFo-wspZ5Bi9AhLRHcQVqHha_sWvNVdWwUfklkVi-AV1JXWECCQReqD95VxNAiZWhyUPeTYcKTQcnRZdRpnJlKcRbI98SRws1IwmvMlpGIHnX6m8PmPS-ZiG7buAStNelt4n6nvjYUJpeLDDgqt-VKv_12l9Qzz2VV_9QUWvT1HLVhtrPhiYfzM6LMJ3eiC-Y"/>
+</div>
+<h3 class="font-headline-sm text-lg text-on-surface dark:text-on-secondary-fixed-variant">Cloud &amp; DevOps</h3>
+<p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">AWS, Docker, CI/CD, Terraform</p>
+</div>
+</div>
+</section><section class="py-xl scroll-mt-24" id="education">
+<div class="mb-lg space-y-xs text-center md:text-left">
+<h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Educación</h2>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant">Mi trayectoria académica y formación continua.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Education Item 1 -->
+<div class="p-md bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 ambient-shadow transition-all duration-300 flex flex-col gap-sm">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-sm text-lg text-on-surface dark:text-on-secondary-fixed-variant">Ingeniería en Sistemas</h3>
+<span class="text-xs font-code px-2 py-1 bg-primary-fixed-dim/20 text-primary dark:text-primary-fixed-dim rounded-full">2018 - 2023</span>
+</div>
+<p class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim">Universidad Tecnológica Nacional</p>
+<p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">Especialización en arquitectura de software, algoritmos avanzados y gestión de proyectos tecnológicos.</p>
+</div>
+<!-- Education Item 2 -->
+<div class="p-md bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 ambient-shadow transition-all duration-300 flex flex-col gap-sm">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-sm text-lg text-on-surface dark:text-on-secondary-fixed-variant">Full Stack Web Development</h3>
+<span class="text-xs font-code px-2 py-1 bg-primary-fixed-dim/20 text-primary dark:text-primary-fixed-dim rounded-full">Graduado</span>
+</div>
+<p class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim">Tech Academy Bootcamp</p>
+<p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">Programa intensivo enfocado en el stack MERN, despliegue en la nube y metodologías ágiles.</p>
+</div>
+</div>
+</section>
+<!-- Projects Section (Bento Grid Style) -->
+<section class="py-xl scroll-mt-24" id="projects">
+<div class="text-center md:text-left mb-lg space-y-xs">
+<h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Selected Works</h2>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant">A collection of recent projects demonstrating full-stack capabilities.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Project 1 (Large) -->
+<div class="col-span-1 md:col-span-8 bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 overflow-hidden ambient-shadow transition-all duration-300 group flex flex-col md:flex-row">
+<div class="w-full md:w-1/2 h-64 md:h-auto overflow-hidden relative">
+<img alt="Project 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A digital mockup of a sleek SaaS dashboard displayed on a modern laptop screen. The interface features minimalist data visualizations, clean typography, and a cohesive warm color palette utilizing soft greens and off-whites. The laptop sits on a clean, uncluttered desk with subtle natural lighting emphasizing a professional, high-end tech environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGBlvMydA1oK_eWGfVdOTEc_KAzz0LfQguD6nS4pVw5rIkzaJO083OxopGOHN61-FkNOy_HkdVwTJAOHpJg_gfU44_Dg_AJmFdLkCelUgCItv7DwXhvfPjc1RMPO9_X1ELIPOxJ7q9S7w9kKgywJZWQOf6IVqDJ7jnJNi8lA6oS5Wia2pkg1Fl65CUQdhsjm4SqznJy5Dw9fkX4K1ZGk7gHx6gd4_z-Za-HBpTJshgteDMIJJGtY66"/>
+</div>
+<div class="w-full md:w-1/2 p-md flex flex-col justify-center space-y-sm">
+<div class="flex flex-wrap gap-2 mb-2">
+<span class="px-2 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-[10px] uppercase tracking-wider">Next.js</span>
+<span class="px-2 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-[10px] uppercase tracking-wider">Tailwind</span>
+<span class="px-2 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-[10px] uppercase tracking-wider">Prisma</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface dark:text-on-secondary-fixed-variant">Enterprise Resource Planner</h3>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant text-sm line-clamp-3">A comprehensive dashboard for managing internal resources, featuring real-time analytics, user role management, and an intuitive drag-and-drop interface.</p>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary dark:text-primary-fixed-dim hover:text-primary-container dark:hover:text-primary-fixed transition-colors mt-auto pt-4 group-hover:translate-x-1 duration-300" href="#">
+                            View Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 2 (Small) -->
+<div class="col-span-1 md:col-span-4 bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 overflow-hidden ambient-shadow transition-all duration-300 flex flex-col group">
+<div class="h-48 overflow-hidden relative p-4 bg-surface-variant/50 dark:bg-inverse-surface/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-[80px] text-primary/50 dark:text-primary-fixed-dim/50 group-hover:scale-110 transition-transform duration-500">shopping_cart_checkout</span>
+</div>
+<div class="p-md flex flex-col flex-1 space-y-2">
+<div class="flex flex-wrap gap-2 mb-1">
+<span class="px-2 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-[10px] uppercase tracking-wider">React Native</span>
+<span class="px-2 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-[10px] uppercase tracking-wider">Node</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface dark:text-on-secondary-fixed-variant text-lg">Artisan Marketplace App</h3>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant text-sm flex-1">A mobile platform connecting local artisans with buyers, featuring secure payments and real-time messaging.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="relative z-40 w-full py-lg px-md flex flex-col md:flex-row justify-between items-center gap-sm bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant/20 max-w-container-max mx-auto">
+<div class="font-headline-sm text-headline-sm text-on-surface dark:text-on-secondary-fixed-variant">DevPortfolio</div>
+<div class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim">
+            © 2024 Developer Portfolio. Built with Warm Minimalism.
+        </div>
+<div class="flex gap-md font-label-md text-label-md text-on-secondary-fixed-variant">
+<a class="hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-80" href="#">GitHub</a>
+<a class="hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-80" href="#">LinkedIn</a>
+<a class="hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-80" href="#">Resume</a>
+</div>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+            const htmlElement = document.documentElement;
+
+            const setTheme = (isDark) => {
+                if (isDark) {
+                    htmlElement.classList.add('dark');
+                    htmlElement.classList.remove('light');
+                    localStorage.theme = 'dark';
+                    themeIcon.textContent = 'light_mode';
+                    themeIcon.style.transform = 'rotate(180deg)';
+                } else {
+                    htmlElement.classList.remove('dark');
+                    htmlElement.classList.add('light');
+                    localStorage.theme = 'light';
+                    themeIcon.textContent = 'dark_mode';
+                    themeIcon.style.transform = 'rotate(0deg)';
+                }
+            };
+
+            // Check initial theme preference
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                setTheme(true);
+            } else {
+                setTheme(false);
+            }
+
+            // Toggle theme on button click
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', () => {
+                    setTheme(!htmlElement.classList.contains('dark'));
+                });
+            }
+
+            // Navbar hide/show on scroll
+            const mainNav = document.getElementById('main-nav');
+            let lastScrollY = window.scrollY;
+
+            window.addEventListener('scroll', () => {
+                const currentScrollY = window.scrollY;
+                if (currentScrollY > lastScrollY && currentScrollY > 64) {
+                    // Scrolling down - hide navbar
+                    mainNav.classList.add('-translate-y-full');
+                } else {
+                    // Scrolling up - show navbar
+                    mainNav.classList.remove('-translate-y-full');
+                }
+                lastScrollY = currentScrollY;
+            });
+
+            // Mouse tracking spotlight effect
+            const pointerGlow = document.getElementById('pointer-glow');
+            document.addEventListener('mousemove', (e) => {
+                if (!pointerGlow) return;
+                const x = e.clientX;
+                const y = e.clientY;
+                const isDark = document.documentElement.classList.contains('dark');
+                const color = isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.04)';
+                pointerGlow.style.background = `radial-gradient(600px circle at ${x}px ${y}px, ${color}, transparent 40%)`;
+            });
+        });
+    </script>
+</body></html>
