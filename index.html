@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
 <html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>DevPortfolio - Full Stack Developer</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Mario Cavada Sepúlveda - Analista Informático en Formación</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -101,7 +101,7 @@
             }
         }
     </script>
-<style>
+    <style>
         body { scroll-behavior: smooth; }
         .ambient-shadow:hover { box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1); }
     </style>
@@ -109,251 +109,550 @@
 <body class="bg-background text-on-background dark:bg-inverse-surface dark:text-inverse-on-surface font-body-md text-body-md antialiased transition-colors duration-300 relative">
 <div class="pointer-events-none fixed inset-0 z-30 hidden md:block transition-opacity duration-300 opacity-100" id="pointer-glow"></div>
 <!-- TopNavBar -->
-<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-md md:px-lg h-16 max-w-container-max mx-auto bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md border-b border-outline-variant/30 transition-transform duration-300 ease-in-out" id="main-nav">
-<div class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">DevPortfolio</div>
-<div class="hidden md:flex items-center gap-md font-body-md text-body-md">
-<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#about">About</a>
-<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#education">Education</a>
-<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#experience">Experience</a>
-<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#projects">Projects</a>
-<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#contact">Contact</a>
-</div>
-<button aria-label="Toggle Dark Mode" class="cursor-pointer transition-all active:scale-95 text-primary dark:text-primary-fixed-dim p-xs rounded-full hover:bg-surface-variant dark:hover:bg-surface-dim flex items-center justify-center w-10 h-10" id="theme-toggle">
-<span class="material-symbols-outlined transition-transform duration-300" id="theme-icon">dark_mode</span>
-</button>
+<nav class="fixed top-0 left-0 w-full z-50 h-16 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md border-b border-outline-variant/30 transition-transform duration-300 ease-in-out" id="main-nav">
+    <div class="max-w-container-max mx-auto h-full flex justify-between items-center px-md md:px-lg">
+        <div class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">Mario Cavada</div>
+        <div class="hidden md:flex items-center gap-md font-body-md text-body-md">
+            <a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#about">Sobre mí</a>
+            <a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#skills">Habilidades</a>
+            <a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#education">Formación</a>
+            <a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#volunteering">Voluntariado</a>
+            <a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#projects">Proyectos</a>
+        </div>
+        <button aria-label="Toggle Dark Mode" class="cursor-pointer transition-all active:scale-95 text-primary dark:text-primary-fixed-dim p-xs rounded-full hover:bg-surface-variant dark:hover:bg-surface-dim flex items-center justify-center w-10 h-10" id="theme-toggle">
+            <span class="material-symbols-outlined transition-transform duration-300" id="theme-icon">dark_mode</span>
+        </button>
+    </div>
 </nav>
 <main class="max-w-container-max mx-auto px-4 md:px-lg pt-24 pb-xl relative z-40">
-<!-- Hero Section -->
-<section class="min-h-[80vh] flex flex-col md:flex-row items-center justify-center gap-lg py-xl">
-<div class="flex-1 space-y-md text-center md:text-left z-10">
-<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background dark:text-inverse-on-surface">
-                    Building Scalable Web Solutions
-                </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant dark:text-on-secondary-fixed-variant max-w-2xl mx-auto md:mx-0">
-                    I'm a Full Stack Developer dedicated to crafting elegant, high-performance applications with a focus on clean code and exceptional user experiences.
+    <!-- Hero Section -->
+    <section class="min-h-[80vh] flex flex-col md:flex-row items-center justify-center gap-lg py-xl">
+        <div class="flex-1 space-y-md text-center md:text-left z-10">
+            <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background dark:text-inverse-on-surface">
+                Construyendo mi Camino en el Desarrollo de Software
+            </h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant dark:text-on-secondary-fixed-variant max-w-2xl mx-auto md:mx-0">
+                Soy Mario Cavada Sepúlveda, estudiante de Analista Informático en INACAP y del curso Full Stack JavaScript de Talento Digital. Apasionado por aprender y con conocimientos en Python, C++ y JavaScript.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-sm justify-center md:justify-start pt-sm">
+                <a class="bg-primary text-on-primary px-lg py-sm rounded-lg font-label-md text-label-md text-center hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm hover:shadow-md" href="#projects">Ver Proyectos</a>
+                <a class="bg-surface-container-high dark:bg-surface-dim text-on-surface dark:text-on-secondary-fixed-variant px-lg py-sm rounded-lg font-label-md text-label-md text-center hover:bg-surface-variant dark:hover:bg-inverse-surface transition-colors border border-outline-variant/50 dark:border-outline/50" href="https://marioalfo.github.io/CV_MarioCavada/static/pdf/Cv_Mario_Cavada.pdf" rel="noopener noreferrer" target="_blank">Descargar CV</a>
+            </div>
+        </div>
+        <div class="flex-1 w-full max-w-md relative">
+            <!-- TODO: reemplaza este círculo con iniciales por la foto que vas a enviar -->
+            <div class="aspect-square rounded-full overflow-hidden border-4 border-surface dark:border-inverse-surface shadow-xl relative z-10 mx-auto bg-primary-container flex items-center justify-center">
+                <span class="font-display-lg text-display-lg text-on-primary-container">MC</span>
+            </div>
+            <div class="absolute inset-0 -z-0 bg-primary-fixed-dim/20 rounded-full blur-3xl transform translate-x-4 translate-y-4"></div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="py-xl scroll-mt-24" id="about">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+            <div class="col-span-1 md:col-span-5 relative hidden md:block">
+                <!-- Panel decorativo (sin foto de stock) -->
+                <div class="aspect-[4/5] rounded-xl overflow-hidden shadow-lg border border-outline-variant/30 relative bg-surface-container-low dark:bg-surface-dim flex flex-col items-center justify-center gap-sm p-md">
+                    <span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" style="font-size: 96px;">terminal</span>
+                    <p class="font-label-md text-label-md text-on-surface-variant dark:text-on-secondary-fixed-variant text-center">Santiago, Chile</p>
+                </div>
+            </div>
+            <div class="col-span-1 md:col-span-7 space-y-sm">
+                <h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Sobre mí</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant leading-relaxed">
+                    Soy un apasionado del aprendizaje, con conocimientos básicos en Python y C++, y actualmente en formación en JavaScript a través del curso Full Stack de Talento Digital.
                 </p>
-<div class="flex flex-col sm:flex-row gap-sm justify-center md:justify-start pt-sm">
-<a class="bg-primary text-on-primary px-lg py-sm rounded-lg font-label-md text-label-md text-center hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm hover:shadow-md" href="#projects">View Work</a>
-<a class="bg-surface-container-high dark:bg-surface-dim text-on-surface dark:text-on-secondary-fixed-variant px-lg py-sm rounded-lg font-label-md text-label-md text-center hover:bg-surface-variant dark:hover:bg-inverse-surface transition-colors border border-outline-variant/50 dark:border-outline/50" href="#">Download Resume</a>
-</div>
-</div>
-<div class="flex-1 w-full max-w-md relative">
-<div class="aspect-square rounded-full overflow-hidden border-4 border-surface dark:border-inverse-surface shadow-xl relative z-10 mx-auto">
-<img alt="Developer Portrait" class="w-full h-full object-cover" data-alt="A professional headshot of a developer in a modern, well-lit workspace. The setting is warm and inviting, featuring soft natural light filtering through a window, illuminating a clean desk with a minimalist setup. The developer exudes calm competence. The color palette emphasizes soft sage greens, warm off-whites, and deep charcoal grey. High resolution, shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW02rqEQDOt0nlDzzlPE2AwKPYNDZqR1EyCoi-mQ9s_JF5ZxiUiSPndiw7ahJ9E28oq6gmoro2opq6dGIJ5Vsclaex9fJybaJ4fPCfkwY1IVJccKF-HJCPQ5rPaWV53T2PzSrQlbETwwBtqY_Wl3xkIc1oX8DM3dl19t8kquh-mhKHvI-zbnUmRL_2AgM25tEQSPoVH6TM0bKWJDbZbGKMVAEi_5uit9LF5UC_YYOzafwVVKgGcLMo"/>
-</div>
-<div class="absolute inset-0 -z-0 bg-primary-fixed-dim/20 rounded-full blur-3xl transform translate-x-4 translate-y-4"></div>
-</div>
-</section>
-<!-- About Section -->
-<section class="py-xl scroll-mt-24" id="about">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
-<div class="col-span-1 md:col-span-5 relative hidden md:block">
-<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-lg border border-outline-variant/30 relative">
-<img alt="Workspace" class="w-full h-full object-cover" data-alt="A meticulously organized developer desk shot from a top-down perspective. Features a mechanical keyboard, a sleek monitor displaying abstract code patterns, and a warm cup of coffee resting on a wooden coaster. Natural sunlight cascades across the scene, highlighting the textures of a sage green notebook. The overall aesthetic is calm, minimalist, and deeply professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa9XI_LTFVL336zL-VcI0dJKAGVckTPCNXnE7JJw1bE7wbS6vLevFfv_kQUNsqpHVm6O2-ewhnHty98dxwlpj6U7o_bPYrJ-3C1TqyAT8Jq7tCBiZWXz7CjZPYAVpgu5k-YLPL5REI5CIC3p2wmTQ3qGurZXFnYloswZZDqS7nCr0JoNEKrMzf9kXSedpDF6SNz4S_wvRcrap1uZH1XgbfXhErgkKHAfUYsFKHRQFKni51mrGluGBg"/>
-</div>
-</div>
-<div class="col-span-1 md:col-span-7 space-y-sm">
-<h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">About Me</h2>
-<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant leading-relaxed">
-                        I am passionate about creating software that solves real-world problems gracefully. With a background in both front-end aesthetics and back-end architecture, I bridge the gap between design and robust functionality. 
-                    </p>
-<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant leading-relaxed">
-                        My approach favors a minimalist philosophy—writing only what is necessary, ensuring maintainability, and focusing heavily on performance and accessibility. I thrive in environments that challenge me to learn and adapt quickly.
-                    </p>
-<div class="pt-sm">
-<h3 class="font-label-md text-label-md text-on-surface dark:text-on-secondary-fixed-variant mb-2 uppercase tracking-widest text-xs">Core Technologies</h3>
-<div class="flex flex-wrap gap-2">
-<span class="px-3 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-code text-xs border border-tertiary-fixed-dim">JavaScript/TS</span>
-<span class="px-3 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-code text-xs border border-tertiary-fixed-dim">React/Next.js</span>
-<span class="px-3 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-code text-xs border border-tertiary-fixed-dim">Node.js</span>
-<span class="px-3 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-code text-xs border border-tertiary-fixed-dim">Python/Django</span>
-<span class="px-3 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-code text-xs border border-tertiary-fixed-dim">PostgreSQL</span>
-<span class="px-3 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-code text-xs border border-tertiary-fixed-dim">AWS</span>
-</div>
-</div>
-</div>
-</div>
-</section><section class="py-xl scroll-mt-24" id="skills">
-<div class="mb-lg space-y-xs text-center md:text-left">
-<h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Technical Skills</h2>
-<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant">A comprehensive overview of my technical expertise and toolset.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
-<!-- Frontend Card -->
-<div class="p-md bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 ambient-shadow transition-all duration-300 flex flex-col gap-sm">
-<div class="w-10 h-10 text-primary dark:text-primary-fixed-dim">
-<img alt="Frontend Icon" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLvN4rwjF2O4oPH3Fa5viTAlTwkikCosSfvAecukIX1eQFljWp1hWmPeoyF3t2kWL1ef6wjCBdST5PNyAvsSegX8Pc0AkQm5Edz9m_CdHeoPc_CEllIR2hbt8mNrgmf_NXM7gG4Arg5tDjxJBGEW_ZmLThyYwBuv9n7YhchzspIBNewusUkcnTEO23ysps3dcc7HeEuY2A8GPK1aSAYYgIU7eRn1cWeloVCZJOYuBkKvmubLcA4cofiK_gE"/>
-</div>
-<h3 class="font-headline-sm text-lg text-on-surface dark:text-on-secondary-fixed-variant">Frontend</h3>
-<p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">React, Next.js, Tailwind CSS, TypeScript</p>
-</div>
-<!-- Backend Card -->
-<div class="p-md bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 ambient-shadow transition-all duration-300 flex flex-col gap-sm">
-<div class="w-10 h-10 text-primary dark:text-primary-fixed-dim">
-<img alt="Backend Icon" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLvDAS5ftBBgd8S9VRdI0H-6Wg49aan1lBZmnMjeWNqDjoYHTXzaE6-libWTjb3-Zg7N53PIa3zRGB0ly19N8SRW4gvwrf20F5m3D7MhdEwxhabYQJPasmZarJL1IZlkIvkhtWqOTffT30EC-Lv1YQPFVaQ7QBlywmOJRfBqhLUzoeAvObTMFUtyzhk_L3NjVId2chcpkYk8enh722RBlriUJSCnbIsF2K2zx7L3VnK01q7Qmm4OZxJP0w"/>
-</div>
-<h3 class="font-headline-sm text-lg text-on-surface dark:text-on-secondary-fixed-variant">Backend</h3>
-<p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">Node.js, Python, Django, Go</p>
-</div>
-<!-- Database Card -->
-<div class="p-md bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 ambient-shadow transition-all duration-300 flex flex-col gap-sm">
-<div class="w-10 h-10 text-primary dark:text-primary-fixed-dim">
-<img alt="Database Icon" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLurMGZDU9vShYh3AkbbxI_WsqyD9hOo2cGP6Wn9DKUXQ8e-G3vybSmGHqDptBN_kihxVzKsojGQxnH4ed2XRaNoTtmeWBTRBiUXICCK2Unq3SCTa4YDNULjpBLII3u2X0IGyPsZwhhV8StThAebgbHlPyct9RsueUSilHUkcTQ7bkAiJNLfWzndHgtNAFjJw_dtM4FD8aXVDoj3c1lzomDum_gIGHPiQHvMA184UVjthIMDtdV-EsDUpdI"/>
-</div>
-<h3 class="font-headline-sm text-lg text-on-surface dark:text-on-secondary-fixed-variant">Database</h3>
-<p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">PostgreSQL, MongoDB, Redis, Prisma</p>
-</div>
-<!-- Cloud & DevOps Card -->
-<div class="p-md bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 ambient-shadow transition-all duration-300 flex flex-col gap-sm">
-<div class="w-10 h-10 text-primary dark:text-primary-fixed-dim">
-<img alt="Cloud Icon" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLvhVKh0HzIanreHtKbC5IUsSx0gE9HfqZ13N7T4KxR7Jg0pJPfoxSyj3tNFo-wspZ5Bi9AhLRHcQVqHha_sWvNVdWwUfklkVi-AV1JXWECCQReqD95VxNAiZWhyUPeTYcKTQcnRZdRpnJlKcRbI98SRws1IwmvMlpGIHnX6m8PmPS-ZiG7buAStNelt4n6nvjYUJpeLDDgqt-VKv_12l9Qzz2VV_9QUWvT1HLVhtrPhiYfzM6LMJ3eiC-Y"/>
-</div>
-<h3 class="font-headline-sm text-lg text-on-surface dark:text-on-secondary-fixed-variant">Cloud &amp; DevOps</h3>
-<p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">AWS, Docker, CI/CD, Terraform</p>
-</div>
-</div>
+                <p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant leading-relaxed">
+                    Estudio Analista Informático en INACAP. Me considero una persona responsable, resolutiva y comprometida, siempre dispuesto a aprender y a asumir nuevos desafíos técnicos.
+                </p>
+                <div class="pt-sm">
+                    <h3 class="font-label-md text-label-md text-on-surface dark:text-on-secondary-fixed-variant mb-2 uppercase tracking-widest text-xs">Tecnologías</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-code text-xs border border-tertiary-fixed-dim">JavaScript</span>
+                        <span class="px-3 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-code text-xs border border-tertiary-fixed-dim">HTML</span>
+                        <span class="px-3 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-code text-xs border border-tertiary-fixed-dim">CSS</span>
+                        <span class="px-3 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-code text-xs border border-tertiary-fixed-dim">Python</span>
+                        <span class="px-3 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-code text-xs border border-tertiary-fixed-dim">C++</span>
+                        <span class="px-3 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-code text-xs border border-tertiary-fixed-dim">Git/GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><section class="py-xl scroll-mt-24" id="skills">
+    <div class="mb-lg space-y-xs text-center md:text-left">
+        <h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Habilidades Técnicas</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant">Un resumen de mis conocimientos técnicos y herramientas en desarrollo.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+        <!-- Frontend Card -->
+        <div class="p-md bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 ambient-shadow transition-all duration-300 flex flex-col gap-sm">
+            <div class="w-10 h-10 text-primary dark:text-primary-fixed-dim flex items-center justify-center">
+                <span class="material-symbols-outlined" style="font-size: 40px;">code</span>
+            </div>
+            <h3 class="font-headline-sm text-lg text-on-surface dark:text-on-secondary-fixed-variant">Frontend</h3>
+            <p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">JavaScript, HTML, CSS</p>
+        </div>
+        <!-- Backend Card -->
+        <div class="p-md bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 ambient-shadow transition-all duration-300 flex flex-col gap-sm">
+            <div class="w-10 h-10 text-primary dark:text-primary-fixed-dim flex items-center justify-center">
+                <span class="material-symbols-outlined" style="font-size: 40px;">database</span>
+            </div>
+            <h3 class="font-headline-sm text-lg text-on-surface dark:text-on-secondary-fixed-variant">Backend</h3>
+            <p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">JavaScript, Python</p>
+        </div>
+        <!-- En Formación Card -->
+        <div class="p-md bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 ambient-shadow transition-all duration-300 flex flex-col gap-sm">
+            <div class="w-10 h-10 text-primary dark:text-primary-fixed-dim flex items-center justify-center">
+                <span class="material-symbols-outlined" style="font-size: 40px;">school</span>
+            </div>
+            <h3 class="font-headline-sm text-lg text-on-surface dark:text-on-secondary-fixed-variant">En Formación</h3>
+            <p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">C++ (autodidacta), Python (autodidacta)</p>
+        </div>
+        <!-- Soft Skills Card -->
+        <div class="p-md bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 ambient-shadow transition-all duration-300 flex flex-col gap-sm">
+            <div class="w-10 h-10 text-primary dark:text-primary-fixed-dim flex items-center justify-center">
+                <span class="material-symbols-outlined" style="font-size: 40px;">groups</span>
+            </div>
+            <h3 class="font-headline-sm text-lg text-on-surface dark:text-on-secondary-fixed-variant">Soft Skills</h3>
+            <p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">Liderazgo, Proactividad, Comunicación</p>
+        </div>
+    </div>
 </section><section class="py-xl scroll-mt-24" id="education">
-<div class="mb-lg space-y-xs text-center md:text-left">
-<h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Educación</h2>
-<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant">Mi trayectoria académica y formación continua.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-<!-- Education Item 1 -->
-<div class="p-md bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 ambient-shadow transition-all duration-300 flex flex-col gap-sm">
-<div class="flex justify-between items-start">
-<h3 class="font-headline-sm text-lg text-on-surface dark:text-on-secondary-fixed-variant">Ingeniería en Sistemas</h3>
-<span class="text-xs font-code px-2 py-1 bg-primary-fixed-dim/20 text-primary dark:text-primary-fixed-dim rounded-full">2018 - 2023</span>
-</div>
-<p class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim">Universidad Tecnológica Nacional</p>
-<p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">Especialización en arquitectura de software, algoritmos avanzados y gestión de proyectos tecnológicos.</p>
-</div>
-<!-- Education Item 2 -->
-<div class="p-md bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 ambient-shadow transition-all duration-300 flex flex-col gap-sm">
-<div class="flex justify-between items-start">
-<h3 class="font-headline-sm text-lg text-on-surface dark:text-on-secondary-fixed-variant">Full Stack Web Development</h3>
-<span class="text-xs font-code px-2 py-1 bg-primary-fixed-dim/20 text-primary dark:text-primary-fixed-dim rounded-full">Graduado</span>
-</div>
-<p class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim">Tech Academy Bootcamp</p>
-<p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">Programa intensivo enfocado en el stack MERN, despliegue en la nube y metodologías ágiles.</p>
-</div>
-</div>
+    <div class="mb-lg space-y-xs text-center md:text-left">
+        <h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Formación</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant">Mi trayectoria académica y formación continua.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+        <!-- Education Item 1 -->
+        <div class="p-md bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 ambient-shadow transition-all duration-300 flex flex-col gap-sm">
+            <div class="flex justify-between items-start">
+                <h3 class="font-headline-sm text-lg text-on-surface dark:text-on-secondary-fixed-variant">Analista Informático</h3>
+                <span class="text-xs font-code px-2 py-1 bg-primary-fixed-dim/20 text-primary dark:text-primary-fixed-dim rounded-full">Mayo 2026 - Actualidad</span>
+            </div>
+            <p class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim">Instituto Técnico Profesional INACAP</p>
+            <p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">Actualmente cursando el primer semestre de la carrera de Analista Informático.</p>
+        </div>
+        <!-- Education Item 2 -->
+        <div class="p-md bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 ambient-shadow transition-all duration-300 flex flex-col gap-sm">
+            <div class="flex justify-between items-start">
+                <h3 class="font-headline-sm text-lg text-on-surface dark:text-on-secondary-fixed-variant">Curso Full Stack JavaScript</h3>
+                <span class="text-xs font-code px-2 py-1 bg-primary-fixed-dim/20 text-primary dark:text-primary-fixed-dim rounded-full">Actualidad</span>
+            </div>
+            <p class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim">Talento Digital</p>
+            <p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">Formación práctica en desarrollo Full Stack con JavaScript, HTML y CSS.</p>
+        </div>
+    </div>
 </section>
-<!-- Projects Section (Bento Grid Style) -->
-<section class="py-xl scroll-mt-24" id="projects">
-<div class="text-center md:text-left mb-lg space-y-xs">
-<h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Selected Works</h2>
-<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant">A collection of recent projects demonstrating full-stack capabilities.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<!-- Project 1 (Large) -->
-<div class="col-span-1 md:col-span-8 bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 overflow-hidden ambient-shadow transition-all duration-300 group flex flex-col md:flex-row">
-<div class="w-full md:w-1/2 h-64 md:h-auto overflow-hidden relative">
-<img alt="Project 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A digital mockup of a sleek SaaS dashboard displayed on a modern laptop screen. The interface features minimalist data visualizations, clean typography, and a cohesive warm color palette utilizing soft greens and off-whites. The laptop sits on a clean, uncluttered desk with subtle natural lighting emphasizing a professional, high-end tech environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGBlvMydA1oK_eWGfVdOTEc_KAzz0LfQguD6nS4pVw5rIkzaJO083OxopGOHN61-FkNOy_HkdVwTJAOHpJg_gfU44_Dg_AJmFdLkCelUgCItv7DwXhvfPjc1RMPO9_X1ELIPOxJ7q9S7w9kKgywJZWQOf6IVqDJ7jnJNi8lA6oS5Wia2pkg1Fl65CUQdhsjm4SqznJy5Dw9fkX4K1ZGk7gHx6gd4_z-Za-HBpTJshgteDMIJJGtY66"/>
-</div>
-<div class="w-full md:w-1/2 p-md flex flex-col justify-center space-y-sm">
-<div class="flex flex-wrap gap-2 mb-2">
-<span class="px-2 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-[10px] uppercase tracking-wider">Next.js</span>
-<span class="px-2 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-[10px] uppercase tracking-wider">Tailwind</span>
-<span class="px-2 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-[10px] uppercase tracking-wider">Prisma</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface dark:text-on-secondary-fixed-variant">Enterprise Resource Planner</h3>
-<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant text-sm line-clamp-3">A comprehensive dashboard for managing internal resources, featuring real-time analytics, user role management, and an intuitive drag-and-drop interface.</p>
-<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary dark:text-primary-fixed-dim hover:text-primary-container dark:hover:text-primary-fixed transition-colors mt-auto pt-4 group-hover:translate-x-1 duration-300" href="#">
-                            View Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-</div>
-<!-- Project 2 (Small) -->
-<div class="col-span-1 md:col-span-4 bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 overflow-hidden ambient-shadow transition-all duration-300 flex flex-col group">
-<div class="h-48 overflow-hidden relative p-4 bg-surface-variant/50 dark:bg-inverse-surface/30 flex items-center justify-center">
-<span class="material-symbols-outlined text-[80px] text-primary/50 dark:text-primary-fixed-dim/50 group-hover:scale-110 transition-transform duration-500">shopping_cart_checkout</span>
-</div>
-<div class="p-md flex flex-col flex-1 space-y-2">
-<div class="flex flex-wrap gap-2 mb-1">
-<span class="px-2 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-[10px] uppercase tracking-wider">React Native</span>
-<span class="px-2 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-[10px] uppercase tracking-wider">Node</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface dark:text-on-secondary-fixed-variant text-lg">Artisan Marketplace App</h3>
-<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant text-sm flex-1">A mobile platform connecting local artisans with buyers, featuring secure payments and real-time messaging.</p>
-</div>
-</div>
-</div>
-</section>
+    <!-- Volunteering Section -->
+    <section class="py-xl scroll-mt-24" id="volunteering">
+        <div class="mb-lg space-y-xs text-center md:text-left">
+            <h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Voluntariado</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant">Compromiso social y trabajo en equipo fuera del ámbito académico, con TECHO Atacama.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+            <!-- Voluntariado Item: Trabajos de Emergencia (Valparaíso · 2024) -->
+            <div class="bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 overflow-hidden ambient-shadow transition-all duration-300 flex flex-col">
+                <div class="aspect-video relative overflow-hidden group/carousel" data-carousel>
+                    <div class="carousel-track flex h-full transition-transform duration-300 ease-in-out">
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos de Emergencia Valparaíso 2024 - foto 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/valparaiso-2024-1.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos de Emergencia Valparaíso 2024 - foto 2" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/valparaiso-2024-2.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos de Emergencia Valparaíso 2024 - foto 3" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/valparaiso-2024-3.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button aria-label="Anterior" class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface/80 dark:bg-inverse-surface/80 text-on-surface dark:text-inverse-on-surface flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 shadow-sm" type="button">
+                        <span class="material-symbols-outlined text-lg">chevron_left</span>
+                    </button>
+                    <button aria-label="Siguiente" class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface/80 dark:bg-inverse-surface/80 text-on-surface dark:text-inverse-on-surface flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 shadow-sm" type="button">
+                        <span class="material-symbols-outlined text-lg">chevron_right</span>
+                    </button>
+                    <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+                        <button aria-label="Foto 1" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-100 transition-opacity duration-200" type="button"></button>
+                        <button aria-label="Foto 2" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-40 transition-opacity duration-200" type="button"></button>
+                        <button aria-label="Foto 3" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-40 transition-opacity duration-200" type="button"></button>
+                    </div>
+                </div>
+                <div class="p-md space-y-1">
+                    <h3 class="font-headline-sm text-base text-on-surface dark:text-on-secondary-fixed-variant">Trabajos de Emergencia</h3>
+                    <p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">Valparaíso · 2024</p>
+                </div>
+            </div>
+            <!-- Voluntariado Item: Trabajos de Invierno (Huasco · 2024) -->
+            <div class="bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 overflow-hidden ambient-shadow transition-all duration-300 flex flex-col">
+                <div class="aspect-video relative overflow-hidden group/carousel" data-carousel>
+                    <div class="carousel-track flex h-full transition-transform duration-300 ease-in-out">
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos de Invierno Huasco 2024 - foto 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/huasco-2024-1.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos de Invierno Huasco 2024 - foto 2" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/huasco-2024-2.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos de Invierno Huasco 2024 - foto 3" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/huasco-2024-3.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button aria-label="Anterior" class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface/80 dark:bg-inverse-surface/80 text-on-surface dark:text-inverse-on-surface flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 shadow-sm" type="button">
+                        <span class="material-symbols-outlined text-lg">chevron_left</span>
+                    </button>
+                    <button aria-label="Siguiente" class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface/80 dark:bg-inverse-surface/80 text-on-surface dark:text-inverse-on-surface flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 shadow-sm" type="button">
+                        <span class="material-symbols-outlined text-lg">chevron_right</span>
+                    </button>
+                    <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+                        <button aria-label="Foto 1" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-100 transition-opacity duration-200" type="button"></button>
+                        <button aria-label="Foto 2" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-40 transition-opacity duration-200" type="button"></button>
+                        <button aria-label="Foto 3" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-40 transition-opacity duration-200" type="button"></button>
+                    </div>
+                </div>
+                <div class="p-md space-y-1">
+                    <h3 class="font-headline-sm text-base text-on-surface dark:text-on-secondary-fixed-variant">Trabajos de Invierno</h3>
+                    <p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">Huasco · 2024</p>
+                </div>
+            </div>
+            <!-- Voluntariado Item: Trabajos de Invierno (Copiapó · 2025) -->
+            <div class="bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 overflow-hidden ambient-shadow transition-all duration-300 flex flex-col">
+                <div class="aspect-video relative overflow-hidden group/carousel" data-carousel>
+                    <div class="carousel-track flex h-full transition-transform duration-300 ease-in-out">
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos de Invierno Copiapó 2025 - foto 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/copiapo-2025-1.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos de Invierno Copiapó 2025 - foto 2" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/copiapo-2025-2.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos de Invierno Copiapó 2025 - foto 3" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/copiapo-2025-3.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button aria-label="Anterior" class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface/80 dark:bg-inverse-surface/80 text-on-surface dark:text-inverse-on-surface flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 shadow-sm" type="button">
+                        <span class="material-symbols-outlined text-lg">chevron_left</span>
+                    </button>
+                    <button aria-label="Siguiente" class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface/80 dark:bg-inverse-surface/80 text-on-surface dark:text-inverse-on-surface flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 shadow-sm" type="button">
+                        <span class="material-symbols-outlined text-lg">chevron_right</span>
+                    </button>
+                    <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+                        <button aria-label="Foto 1" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-100 transition-opacity duration-200" type="button"></button>
+                        <button aria-label="Foto 2" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-40 transition-opacity duration-200" type="button"></button>
+                        <button aria-label="Foto 3" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-40 transition-opacity duration-200" type="button"></button>
+                    </div>
+                </div>
+                <div class="p-md space-y-1">
+                    <h3 class="font-headline-sm text-base text-on-surface dark:text-on-secondary-fixed-variant">Trabajos de Invierno</h3>
+                    <p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">Copiapó · 2025</p>
+                </div>
+            </div>
+            <!-- Voluntariado Item: Trabajos de Verano (Alto Hospicio · 2026) -->
+            <div class="bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 overflow-hidden ambient-shadow transition-all duration-300 flex flex-col">
+                <div class="aspect-video relative overflow-hidden group/carousel" data-carousel>
+                    <div class="carousel-track flex h-full transition-transform duration-300 ease-in-out">
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos de Verano Alto Hospicio 2026 - foto 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/alto-hospicio-2026-1.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos de Verano Alto Hospicio 2026 - foto 2" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/alto-hospicio-2026-2.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos de Verano Alto Hospicio 2026 - foto 3" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/alto-hospicio-2026-3.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button aria-label="Anterior" class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface/80 dark:bg-inverse-surface/80 text-on-surface dark:text-inverse-on-surface flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 shadow-sm" type="button">
+                        <span class="material-symbols-outlined text-lg">chevron_left</span>
+                    </button>
+                    <button aria-label="Siguiente" class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface/80 dark:bg-inverse-surface/80 text-on-surface dark:text-inverse-on-surface flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 shadow-sm" type="button">
+                        <span class="material-symbols-outlined text-lg">chevron_right</span>
+                    </button>
+                    <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+                        <button aria-label="Foto 1" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-100 transition-opacity duration-200" type="button"></button>
+                        <button aria-label="Foto 2" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-40 transition-opacity duration-200" type="button"></button>
+                        <button aria-label="Foto 3" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-40 transition-opacity duration-200" type="button"></button>
+                    </div>
+                </div>
+                <div class="p-md space-y-1">
+                    <h3 class="font-headline-sm text-base text-on-surface dark:text-on-secondary-fixed-variant">Trabajos de Verano</h3>
+                    <p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">Alto Hospicio · 2026</p>
+                </div>
+            </div>
+            <!-- Voluntariado Item: Trabajos de Emergencia (Lirquén · 2026) -->
+            <div class="bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 overflow-hidden ambient-shadow transition-all duration-300 flex flex-col">
+                <div class="aspect-video relative overflow-hidden group/carousel" data-carousel>
+                    <div class="carousel-track flex h-full transition-transform duration-300 ease-in-out">
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos de Emergencia Lirquén 2026 - foto 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/lirquen-2026-1.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos de Emergencia Lirquén 2026 - foto 2" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/lirquen-2026-2.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos de Emergencia Lirquén 2026 - foto 3" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/lirquen-2026-3.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button aria-label="Anterior" class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface/80 dark:bg-inverse-surface/80 text-on-surface dark:text-inverse-on-surface flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 shadow-sm" type="button">
+                        <span class="material-symbols-outlined text-lg">chevron_left</span>
+                    </button>
+                    <button aria-label="Siguiente" class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface/80 dark:bg-inverse-surface/80 text-on-surface dark:text-inverse-on-surface flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 shadow-sm" type="button">
+                        <span class="material-symbols-outlined text-lg">chevron_right</span>
+                    </button>
+                    <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+                        <button aria-label="Foto 1" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-100 transition-opacity duration-200" type="button"></button>
+                        <button aria-label="Foto 2" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-40 transition-opacity duration-200" type="button"></button>
+                        <button aria-label="Foto 3" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-40 transition-opacity duration-200" type="button"></button>
+                    </div>
+                </div>
+                <div class="p-md space-y-1">
+                    <h3 class="font-headline-sm text-base text-on-surface dark:text-on-secondary-fixed-variant">Trabajos de Emergencia</h3>
+                    <p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">Lirquén · 2026</p>
+                </div>
+            </div>
+            <!-- Voluntariado Item: Trabajos de Invierno (Tocopilla · 2026) -->
+            <div class="bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 overflow-hidden ambient-shadow transition-all duration-300 flex flex-col">
+                <div class="aspect-video relative overflow-hidden group/carousel" data-carousel>
+                    <div class="carousel-track flex h-full transition-transform duration-300 ease-in-out">
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos de Invierno Tocopilla 2026 - foto 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/tocopilla-2026-1.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos de Invierno Tocopilla 2026 - foto 2" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/tocopilla-2026-2.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos de Invierno Tocopilla 2026 - foto 3" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/tocopilla-2026-3.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button aria-label="Anterior" class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface/80 dark:bg-inverse-surface/80 text-on-surface dark:text-inverse-on-surface flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 shadow-sm" type="button">
+                        <span class="material-symbols-outlined text-lg">chevron_left</span>
+                    </button>
+                    <button aria-label="Siguiente" class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface/80 dark:bg-inverse-surface/80 text-on-surface dark:text-inverse-on-surface flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 shadow-sm" type="button">
+                        <span class="material-symbols-outlined text-lg">chevron_right</span>
+                    </button>
+                    <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+                        <button aria-label="Foto 1" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-100 transition-opacity duration-200" type="button"></button>
+                        <button aria-label="Foto 2" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-40 transition-opacity duration-200" type="button"></button>
+                        <button aria-label="Foto 3" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-40 transition-opacity duration-200" type="button"></button>
+                    </div>
+                </div>
+                <div class="p-md space-y-1">
+                    <h3 class="font-headline-sm text-base text-on-surface dark:text-on-secondary-fixed-variant">Trabajos de Invierno</h3>
+                    <p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">Tocopilla · 2026</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Projects Section (Bento Grid Style) -->
+    <section class="py-xl scroll-mt-24" id="projects">
+        <div class="text-center md:text-left mb-lg space-y-xs">
+            <h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Proyectos</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant">Algunos de los proyectos que he desarrollado durante mi formación.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+            <!-- Project 1 (Large) -->
+            <div class="col-span-1 md:col-span-8 bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 overflow-hidden ambient-shadow transition-all duration-300 group flex flex-col md:flex-row">
+                <div class="w-full md:w-1/2 h-64 md:h-auto overflow-hidden relative bg-surface-variant/50 dark:bg-inverse-surface/30 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[100px] text-primary/50 dark:text-primary-fixed-dim/50 group-hover:scale-105 transition-transform duration-700">coronavirus</span>
+                </div>
+                <div class="w-full md:w-1/2 p-md flex flex-col justify-center space-y-sm">
+                    <div class="flex flex-wrap gap-2 mb-2">
+                        <span class="px-2 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-[10px] uppercase tracking-wider">JavaScript</span>
+                        <span class="px-2 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-[10px] uppercase tracking-wider">Hackathon</span>
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface dark:text-on-secondary-fixed-variant">Hackathon: Base de Datos COVID-19</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant text-sm line-clamp-3">Proyecto desarrollado durante un hackathon, enfocado en la gestión y visualización de datos sobre COVID-19 usando JavaScript.</p>
+                    <a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary dark:text-primary-fixed-dim hover:text-primary-container dark:hover:text-primary-fixed transition-colors mt-auto pt-4 group-hover:translate-x-1 duration-300" href="https://github.com/Marioalfo/Hackaton_Final" rel="noopener noreferrer" target="_blank">
+                        Ver en GitHub <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Project 2 (Small) -->
+            <div class="col-span-1 md:col-span-4 bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 overflow-hidden ambient-shadow transition-all duration-300 flex flex-col group">
+                <div class="h-48 overflow-hidden relative p-4 bg-surface-variant/50 dark:bg-inverse-surface/30 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[80px] text-primary/50 dark:text-primary-fixed-dim/50 group-hover:scale-110 transition-transform duration-500">stadia_controller</span>
+                </div>
+                <div class="p-md flex flex-col flex-1 space-y-2">
+                    <div class="flex flex-wrap gap-2 mb-1">
+                        <span class="px-2 py-1 bg-tertiary-fixed dark:bg-tertiary-fixed-dim text-on-tertiary-fixed-variant rounded-full font-code text-[10px] uppercase tracking-wider">HTML</span>
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface dark:text-on-secondary-fixed-variant text-lg">Tipos de Videojuegos</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant text-sm flex-1">Página web sobre los distintos tipos de videojuegos que existen actualmente.</p>
+                    <a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary dark:text-primary-fixed-dim hover:text-primary-container dark:hover:text-primary-fixed transition-colors pt-2" href="https://github.com/Marioalfo/Html_Proyecto_2-Videojuegos" rel="noopener noreferrer" target="_blank">
+                        Ver en GitHub <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 <!-- Footer -->
-<footer class="relative z-40 w-full py-lg px-md flex flex-col md:flex-row justify-between items-center gap-sm bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant/20 max-w-container-max mx-auto">
-<div class="font-headline-sm text-headline-sm text-on-surface dark:text-on-secondary-fixed-variant">DevPortfolio</div>
-<div class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim">
-            © 2024 Developer Portfolio. Built with Warm Minimalism.
-        </div>
-<div class="flex gap-md font-label-md text-label-md text-on-secondary-fixed-variant">
-<a class="hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-80" href="#">GitHub</a>
-<a class="hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-80" href="#">LinkedIn</a>
-<a class="hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-80" href="#">Resume</a>
-</div>
+<footer class="relative z-40 w-full py-lg px-md flex flex-col md:flex-row justify-between items-center gap-md bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant/20 max-w-container-max mx-auto">
+    <div class="font-headline-sm text-headline-sm text-on-surface dark:text-on-secondary-fixed-variant">Mario Cavada Sepúlveda</div>
+    <div class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim">
+        © 2026 Mario Cavada Sepúlveda. Santiago, Chile.
+    </div>
+    <div class="flex gap-sm">
+        <a aria-label="GitHub" class="flex items-center gap-2 px-4 py-2 rounded-lg border border-outline-variant/50 dark:border-outline/50 text-on-surface dark:text-on-secondary-fixed-variant hover:bg-primary hover:text-on-primary hover:border-primary dark:hover:bg-primary-fixed-dim dark:hover:text-on-primary-fixed transition-colors" href="https://github.com/Marioalfo" rel="noopener noreferrer" target="_blank">
+            <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"></path></svg>
+            <span class="font-label-md text-label-md">GitHub</span>
+        </a>
+        <a aria-label="LinkedIn" class="flex items-center gap-2 px-4 py-2 rounded-lg border border-outline-variant/50 dark:border-outline/50 text-on-surface dark:text-on-secondary-fixed-variant hover:bg-primary hover:text-on-primary hover:border-primary dark:hover:bg-primary-fixed-dim dark:hover:text-on-primary-fixed transition-colors" href="https://www.linkedin.com/in/mario-cavada-sep%C3%BAlveda/" rel="noopener noreferrer" target="_blank">
+            <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.446-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+            <span class="font-label-md text-label-md">LinkedIn</span>
+        </a>
+    </div>
 </footer>
 <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const themeToggleBtn = document.getElementById('theme-toggle');
-            const themeIcon = document.getElementById('theme-icon');
-            const htmlElement = document.documentElement;
+    document.addEventListener('DOMContentLoaded', () => {
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const htmlElement = document.documentElement;
 
-            const setTheme = (isDark) => {
-                if (isDark) {
-                    htmlElement.classList.add('dark');
-                    htmlElement.classList.remove('light');
-                    localStorage.theme = 'dark';
-                    themeIcon.textContent = 'light_mode';
-                    themeIcon.style.transform = 'rotate(180deg)';
-                } else {
-                    htmlElement.classList.remove('dark');
-                    htmlElement.classList.add('light');
-                    localStorage.theme = 'light';
-                    themeIcon.textContent = 'dark_mode';
-                    themeIcon.style.transform = 'rotate(0deg)';
-                }
+        const setTheme = (isDark) => {
+            if (isDark) {
+                htmlElement.classList.add('dark');
+                htmlElement.classList.remove('light');
+                localStorage.theme = 'dark';
+                themeIcon.textContent = 'light_mode';
+                themeIcon.style.transform = 'rotate(180deg)';
+            } else {
+                htmlElement.classList.remove('dark');
+                htmlElement.classList.add('light');
+                localStorage.theme = 'light';
+                themeIcon.textContent = 'dark_mode';
+                themeIcon.style.transform = 'rotate(0deg)';
+            }
+        };
+
+        // Check initial theme preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            setTheme(true);
+        } else {
+            setTheme(false);
+        }
+
+        // Toggle theme on button click
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                setTheme(!htmlElement.classList.contains('dark'));
+            });
+        }
+
+        // Navbar hide/show on scroll
+        const mainNav = document.getElementById('main-nav');
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY > lastScrollY && currentScrollY > 64) {
+                // Scrolling down - hide navbar
+                mainNav.classList.add('-translate-y-full');
+            } else {
+                // Scrolling up - show navbar
+                mainNav.classList.remove('-translate-y-full');
+            }
+            lastScrollY = currentScrollY;
+        });
+
+        // Mouse tracking spotlight effect
+        const pointerGlow = document.getElementById('pointer-glow');
+        document.addEventListener('mousemove', (e) => {
+            if (!pointerGlow) return;
+            const x = e.clientX;
+            const y = e.clientY;
+            const isDark = document.documentElement.classList.contains('dark');
+            const color = isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.04)';
+            pointerGlow.style.background = `radial-gradient(600px circle at ${x}px ${y}px, ${color}, transparent 40%)`;
+        });
+
+        // Volunteering carousels (multiple photos per job)
+        document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+            const track = carousel.querySelector('.carousel-track');
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const dots = carousel.querySelectorAll('.carousel-dot');
+            const prevBtn = carousel.querySelector('.carousel-prev');
+            const nextBtn = carousel.querySelector('.carousel-next');
+            const total = slides.length;
+            let index = 0;
+
+            const update = () => {
+                track.style.transform = `translateX(-${index * 100}%)`;
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('opacity-100', i === index);
+                    dot.classList.toggle('opacity-40', i !== index);
+                });
             };
 
-            // Check initial theme preference
-            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                setTheme(true);
-            } else {
-                setTheme(false);
-            }
-
-            // Toggle theme on button click
-            if (themeToggleBtn) {
-                themeToggleBtn.addEventListener('click', () => {
-                    setTheme(!htmlElement.classList.contains('dark'));
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    index = (index - 1 + total) % total;
+                    update();
                 });
             }
-
-            // Navbar hide/show on scroll
-            const mainNav = document.getElementById('main-nav');
-            let lastScrollY = window.scrollY;
-
-            window.addEventListener('scroll', () => {
-                const currentScrollY = window.scrollY;
-                if (currentScrollY > lastScrollY && currentScrollY > 64) {
-                    // Scrolling down - hide navbar
-                    mainNav.classList.add('-translate-y-full');
-                } else {
-                    // Scrolling up - show navbar
-                    mainNav.classList.remove('-translate-y-full');
-                }
-                lastScrollY = currentScrollY;
-            });
-
-            // Mouse tracking spotlight effect
-            const pointerGlow = document.getElementById('pointer-glow');
-            document.addEventListener('mousemove', (e) => {
-                if (!pointerGlow) return;
-                const x = e.clientX;
-                const y = e.clientY;
-                const isDark = document.documentElement.classList.contains('dark');
-                const color = isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.04)';
-                pointerGlow.style.background = `radial-gradient(600px circle at ${x}px ${y}px, ${color}, transparent 40%)`;
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    index = (index + 1) % total;
+                    update();
+                });
+            }
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => {
+                    index = i;
+                    update();
+                });
             });
         });
-    </script>
+    });
+</script>
 </body></html>
