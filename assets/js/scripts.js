@@ -33,20 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Navbar hide/show on scroll
+    // Navbar shadow on scroll (navbar always stays visible)
     const mainNav = document.getElementById('main-nav');
-    let lastScrollY = window.scrollY;
-
     window.addEventListener('scroll', () => {
-        const currentScrollY = window.scrollY;
-        if (currentScrollY > lastScrollY && currentScrollY > 64) {
-            // Scrolling down - hide navbar
-            mainNav.classList.add('-translate-y-full');
+        if (window.scrollY > 8) {
+            mainNav.classList.add('shadow-md');
         } else {
-            // Scrolling up - show navbar
-            mainNav.classList.remove('-translate-y-full');
+            mainNav.classList.remove('shadow-md');
         }
-        lastScrollY = currentScrollY;
     });
 
     // Mouse tracking spotlight effect
