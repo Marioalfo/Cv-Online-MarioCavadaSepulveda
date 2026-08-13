@@ -101,10 +101,8 @@
             }
         }
     </script>
-    <style>
-        body { scroll-behavior: smooth; }
-        .ambient-shadow:hover { box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1); }
-    </style>
+    <link href="assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+    <link href="assets/css/styles.css" rel="stylesheet"/>
 </head>
 <body class="bg-background text-on-background dark:bg-inverse-surface dark:text-inverse-on-surface font-body-md text-body-md antialiased transition-colors duration-300 relative">
 <div class="pointer-events-none fixed inset-0 z-30 hidden md:block transition-opacity duration-300 opacity-100" id="pointer-glow"></div>
@@ -118,6 +116,7 @@
             <a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#education">Formación</a>
             <a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#volunteering">Voluntariado</a>
             <a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#projects">Proyectos</a>
+            <a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#contact">Contacto</a>
         </div>
         <button aria-label="Toggle Dark Mode" class="cursor-pointer transition-all active:scale-95 text-primary dark:text-primary-fixed-dim p-xs rounded-full hover:bg-surface-variant dark:hover:bg-surface-dim flex items-center justify-center w-10 h-10" id="theme-toggle">
             <span class="material-symbols-outlined transition-transform duration-300" id="theme-icon">dark_mode</span>
@@ -255,7 +254,7 @@
                 <div class="aspect-video relative overflow-hidden group/carousel" data-carousel>
                     <div class="carousel-track flex h-full transition-transform duration-300 ease-in-out">
                         <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
-                            <img alt="Trabajos de Emergencia Valparaíso 2024 - foto 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/valparaiso-2024-1.jpg"/>
+                            <img alt="Trabajos de Emergencia Valparaíso 2024 - foto 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/tde_viña_2024/viña1.jpg"/>
                             <div class="w-full h-full items-center justify-center" style="display:flex;">
                                 <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
                             </div>
@@ -295,19 +294,19 @@
                 <div class="aspect-video relative overflow-hidden group/carousel" data-carousel>
                     <div class="carousel-track flex h-full transition-transform duration-300 ease-in-out">
                         <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
-                            <img alt="Trabajos de Invierno Huasco 2024 - foto 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/huasco-2024-1.jpg"/>
+                            <img alt="Trabajos de Invierno Huasco 2024 - foto 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/tdi_huasco_2024/tdihua1.jpg"/>
                             <div class="w-full h-full items-center justify-center" style="display:flex;">
                                 <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
                             </div>
                         </div>
                         <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
-                            <img alt="Trabajos de Invierno Huasco 2024 - foto 2" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/huasco-2024-2.jpg"/>
+                            <img alt="Trabajos de Invierno Huasco 2024 - foto 2" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/tdi_huasco_2024/tdihua2.jpg"/>
                             <div class="w-full h-full items-center justify-center" style="display:flex;">
                                 <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
                             </div>
                         </div>
                         <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
-                            <img alt="Trabajos de Invierno Huasco 2024 - foto 3" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/huasco-2024-3.jpg"/>
+                            <img alt="Trabajos de Invierno Huasco 2024 - foto 3" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/tdi_huasco_2024/tdihua3.jpg"/>
                             <div class="w-full h-full items-center justify-center" style="display:flex;">
                                 <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
                             </div>
@@ -330,24 +329,64 @@
                     <p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">Huasco · 2024</p>
                 </div>
             </div>
+            <!-- Voluntariado Item: Trabajos Zonales (Atacama · 2024) -->
+            <div class="bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 overflow-hidden ambient-shadow transition-all duration-300 flex flex-col">
+                <div class="aspect-video relative overflow-hidden group/carousel" data-carousel>
+                    <div class="carousel-track flex h-full transition-transform duration-300 ease-in-out">
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos Zonales Atacama 2024 - foto 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/copiapo_2024/tdz2024_1.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos Zonales Atacama 2024 - foto 2" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/copiapo_2024/tdz2024_2.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos Zonales Atacama 2024 - foto 3" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/copiapo_2024/tdz2024_3.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button aria-label="Anterior" class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface/80 dark:bg-inverse-surface/80 text-on-surface dark:text-inverse-on-surface flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 shadow-sm" type="button">
+                        <span class="material-symbols-outlined text-lg">chevron_left</span>
+                    </button>
+                    <button aria-label="Siguiente" class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface/80 dark:bg-inverse-surface/80 text-on-surface dark:text-inverse-on-surface flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 shadow-sm" type="button">
+                        <span class="material-symbols-outlined text-lg">chevron_right</span>
+                    </button>
+                    <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+                        <button aria-label="Foto 1" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-100 transition-opacity duration-200" type="button"></button>
+                        <button aria-label="Foto 2" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-40 transition-opacity duration-200" type="button"></button>
+                        <button aria-label="Foto 3" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-40 transition-opacity duration-200" type="button"></button>
+                    </div>
+                </div>
+                <div class="p-md space-y-1">
+                    <h3 class="font-headline-sm text-base text-on-surface dark:text-on-secondary-fixed-variant">Trabajos Zonales</h3>
+                    <p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">Atacama · 2024</p>
+                </div>
+            </div>
             <!-- Voluntariado Item: Trabajos de Invierno (Copiapó · 2025) -->
             <div class="bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 overflow-hidden ambient-shadow transition-all duration-300 flex flex-col">
                 <div class="aspect-video relative overflow-hidden group/carousel" data-carousel>
                     <div class="carousel-track flex h-full transition-transform duration-300 ease-in-out">
                         <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
-                            <img alt="Trabajos de Invierno Copiapó 2025 - foto 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/copiapo-2025-1.jpg"/>
+                            <img alt="Trabajos de Invierno Copiapó 2025 - foto 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/tdi_atacama_2025/tdiata1.JPG"/>
                             <div class="w-full h-full items-center justify-center" style="display:flex;">
                                 <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
                             </div>
                         </div>
                         <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
-                            <img alt="Trabajos de Invierno Copiapó 2025 - foto 2" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/copiapo-2025-2.jpg"/>
+                            <img alt="Trabajos de Invierno Copiapó 2025 - foto 2" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/tdi_atacama_2025/tdiata2.jpg"/>
                             <div class="w-full h-full items-center justify-center" style="display:flex;">
                                 <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
                             </div>
                         </div>
                         <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
-                            <img alt="Trabajos de Invierno Copiapó 2025 - foto 3" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/copiapo-2025-3.jpg"/>
+                            <img alt="Trabajos de Invierno Copiapó 2025 - foto 3" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/tdi_atacama_2025/tdiata3.jpg"/>
                             <div class="w-full h-full items-center justify-center" style="display:flex;">
                                 <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
                             </div>
@@ -370,24 +409,64 @@
                     <p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">Copiapó · 2025</p>
                 </div>
             </div>
+            <!-- Voluntariado Item: Trabajos Zonales (Atacama · 2025) -->
+            <div class="bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 overflow-hidden ambient-shadow transition-all duration-300 flex flex-col">
+                <div class="aspect-video relative overflow-hidden group/carousel" data-carousel>
+                    <div class="carousel-track flex h-full transition-transform duration-300 ease-in-out">
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos Zonales Atacama 2025 - foto 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/copiapo_2025/tdz2025_1.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos Zonales Atacama 2025 - foto 2" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/zonales-atacama-2025-2.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
+                            <img alt="Trabajos Zonales Atacama 2025 - foto 3" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/zonales-atacama-2025-3.jpg"/>
+                            <div class="w-full h-full items-center justify-center" style="display:flex;">
+                                <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button aria-label="Anterior" class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface/80 dark:bg-inverse-surface/80 text-on-surface dark:text-inverse-on-surface flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 shadow-sm" type="button">
+                        <span class="material-symbols-outlined text-lg">chevron_left</span>
+                    </button>
+                    <button aria-label="Siguiente" class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface/80 dark:bg-inverse-surface/80 text-on-surface dark:text-inverse-on-surface flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 shadow-sm" type="button">
+                        <span class="material-symbols-outlined text-lg">chevron_right</span>
+                    </button>
+                    <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+                        <button aria-label="Foto 1" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-100 transition-opacity duration-200" type="button"></button>
+                        <button aria-label="Foto 2" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-40 transition-opacity duration-200" type="button"></button>
+                        <button aria-label="Foto 3" class="carousel-dot w-1.5 h-1.5 rounded-full bg-surface dark:bg-inverse-on-surface opacity-40 transition-opacity duration-200" type="button"></button>
+                    </div>
+                </div>
+                <div class="p-md space-y-1">
+                    <h3 class="font-headline-sm text-base text-on-surface dark:text-on-secondary-fixed-variant">Trabajos Zonales</h3>
+                    <p class="font-body-md text-sm text-on-surface-variant dark:text-on-secondary-fixed-variant">Atacama · 2025</p>
+                </div>
+            </div>
             <!-- Voluntariado Item: Trabajos de Verano (Alto Hospicio · 2026) -->
             <div class="bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 overflow-hidden ambient-shadow transition-all duration-300 flex flex-col">
                 <div class="aspect-video relative overflow-hidden group/carousel" data-carousel>
                     <div class="carousel-track flex h-full transition-transform duration-300 ease-in-out">
                         <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
-                            <img alt="Trabajos de Verano Alto Hospicio 2026 - foto 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/alto-hospicio-2026-1.jpg"/>
+                            <img alt="Trabajos de Verano Alto Hospicio 2026 - foto 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/tdv_altohospicio_2026/tdval3.jpg"/>
                             <div class="w-full h-full items-center justify-center" style="display:flex;">
                                 <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
                             </div>
                         </div>
                         <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
-                            <img alt="Trabajos de Verano Alto Hospicio 2026 - foto 2" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/alto-hospicio-2026-2.jpg"/>
+                            <img alt="Trabajos de Verano Alto Hospicio 2026 - foto 2" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/tdv_altohospicio_2026/tdval4.jpg"/>
                             <div class="w-full h-full items-center justify-center" style="display:flex;">
                                 <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
                             </div>
                         </div>
                         <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
-                            <img alt="Trabajos de Verano Alto Hospicio 2026 - foto 3" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/alto-hospicio-2026-3.jpg"/>
+                            <img alt="Trabajos de Verano Alto Hospicio 2026 - foto 3" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/tdv_altohospicio_2026/tdval5.jpg"/>
                             <div class="w-full h-full items-center justify-center" style="display:flex;">
                                 <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
                             </div>
@@ -415,19 +494,19 @@
                 <div class="aspect-video relative overflow-hidden group/carousel" data-carousel>
                     <div class="carousel-track flex h-full transition-transform duration-300 ease-in-out">
                         <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
-                            <img alt="Trabajos de Emergencia Lirquén 2026 - foto 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/lirquen-2026-1.jpg"/>
+                            <img alt="Trabajos de Emergencia Lirquén 2026 - foto 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/tde_penco_2026/lirquen3.jpg"/>
                             <div class="w-full h-full items-center justify-center" style="display:flex;">
                                 <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
                             </div>
                         </div>
                         <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
-                            <img alt="Trabajos de Emergencia Lirquén 2026 - foto 2" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/lirquen-2026-2.jpg"/>
+                            <img alt="Trabajos de Emergencia Lirquén 2026 - foto 2" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/tde_penco_2026/lirquen5.jpg"/>
                             <div class="w-full h-full items-center justify-center" style="display:flex;">
                                 <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
                             </div>
                         </div>
                         <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
-                            <img alt="Trabajos de Emergencia Lirquén 2026 - foto 3" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/lirquen-2026-3.jpg"/>
+                            <img alt="Trabajos de Emergencia Lirquén 2026 - foto 3" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/tde_penco_2026/lirquen6.jpg"/>
                             <div class="w-full h-full items-center justify-center" style="display:flex;">
                                 <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
                             </div>
@@ -455,19 +534,19 @@
                 <div class="aspect-video relative overflow-hidden group/carousel" data-carousel>
                     <div class="carousel-track flex h-full transition-transform duration-300 ease-in-out">
                         <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
-                            <img alt="Trabajos de Invierno Tocopilla 2026 - foto 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/tocopilla-2026-1.jpg"/>
+                            <img alt="Trabajos de Invierno Tocopilla 2026 - foto 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/tdi_tocopilla_2026/tdito1.jpg"/>
                             <div class="w-full h-full items-center justify-center" style="display:flex;">
                                 <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
                             </div>
                         </div>
                         <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
-                            <img alt="Trabajos de Invierno Tocopilla 2026 - foto 2" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/tocopilla-2026-2.jpg"/>
+                            <img alt="Trabajos de Invierno Tocopilla 2026 - foto 2" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/tdi_tocopilla_2026/tdito2.jpg"/>
                             <div class="w-full h-full items-center justify-center" style="display:flex;">
                                 <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
                             </div>
                         </div>
                         <div class="carousel-slide relative w-full h-full flex-shrink-0 bg-surface-variant/50 dark:bg-inverse-surface/30">
-                            <img alt="Trabajos de Invierno Tocopilla 2026 - foto 3" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/voluntariado/tocopilla-2026-3.jpg"/>
+                            <img alt="Trabajos de Invierno Tocopilla 2026 - foto 3" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" src="assets/img/tdi_tocopilla_2026/tdito4.jpg"/>
                             <div class="w-full h-full items-center justify-center" style="display:flex;">
                                 <span class="material-symbols-outlined text-primary/40 dark:text-primary-fixed-dim/40" style="font-size: 56px;">image</span>
                             </div>
@@ -535,6 +614,33 @@
             </div>
         </div>
     </section>
+    <!-- Contact Section -->
+    <section class="py-xl scroll-mt-24" id="contact">
+        <div class="mb-lg space-y-xs text-center md:text-left">
+            <h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Contacto</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant">¿Tienes una oportunidad o quieres conversar? Escríbeme.</p>
+        </div>
+        <form action="https://formsubmit.co/marioicavada@gmail.com" class="max-w-2xl bg-surface-container-low dark:bg-surface-dim rounded-xl border border-outline-variant/30 p-md md:p-lg space-y-md ambient-shadow" method="POST">
+            <input name="_subject" type="hidden" value="Nuevo mensaje desde tu portafolio"/>
+            <input name="_captcha" type="hidden" value="false"/>
+            <input name="_next" type="hidden" value="https://marioalfo.github.io/"/>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+                <div class="space-y-1">
+                    <label class="font-label-md text-label-md text-on-surface dark:text-on-secondary-fixed-variant" for="contact-name">Nombre</label>
+                    <input class="w-full rounded-lg border border-outline-variant/50 dark:border-outline/50 bg-surface dark:bg-inverse-surface px-4 py-2 text-on-surface dark:text-inverse-on-surface focus:outline-none focus:ring-2 focus:ring-primary" id="contact-name" name="name" placeholder="Tu nombre" required="" type="text"/>
+                </div>
+                <div class="space-y-1">
+                    <label class="font-label-md text-label-md text-on-surface dark:text-on-secondary-fixed-variant" for="contact-email">Correo</label>
+                    <input class="w-full rounded-lg border border-outline-variant/50 dark:border-outline/50 bg-surface dark:bg-inverse-surface px-4 py-2 text-on-surface dark:text-inverse-on-surface focus:outline-none focus:ring-2 focus:ring-primary" id="contact-email" name="email" placeholder="tu@correo.com" required="" type="email"/>
+                </div>
+            </div>
+            <div class="space-y-1">
+                <label class="font-label-md text-label-md text-on-surface dark:text-on-secondary-fixed-variant" for="contact-message">Mensaje</label>
+                <textarea class="w-full rounded-lg border border-outline-variant/50 dark:border-outline/50 bg-surface dark:bg-inverse-surface px-4 py-2 text-on-surface dark:text-inverse-on-surface focus:outline-none focus:ring-2 focus:ring-primary" id="contact-message" name="message" placeholder="Escribe tu mensaje aquí..." required="" rows="5"></textarea>
+            </div>
+            <button class="bg-primary text-on-primary px-lg py-sm rounded-lg font-label-md text-label-md hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm hover:shadow-md" type="submit">Enviar mensaje</button>
+        </form>
+    </section>
 </main>
 <!-- Footer -->
 <footer class="relative z-40 w-full py-lg px-md flex flex-col md:flex-row justify-between items-center gap-md bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant/20 max-w-container-max mx-auto">
@@ -553,106 +659,5 @@
         </a>
     </div>
 </footer>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-        const htmlElement = document.documentElement;
-
-        const setTheme = (isDark) => {
-            if (isDark) {
-                htmlElement.classList.add('dark');
-                htmlElement.classList.remove('light');
-                localStorage.theme = 'dark';
-                themeIcon.textContent = 'light_mode';
-                themeIcon.style.transform = 'rotate(180deg)';
-            } else {
-                htmlElement.classList.remove('dark');
-                htmlElement.classList.add('light');
-                localStorage.theme = 'light';
-                themeIcon.textContent = 'dark_mode';
-                themeIcon.style.transform = 'rotate(0deg)';
-            }
-        };
-
-        // Check initial theme preference
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            setTheme(true);
-        } else {
-            setTheme(false);
-        }
-
-        // Toggle theme on button click
-        if (themeToggleBtn) {
-            themeToggleBtn.addEventListener('click', () => {
-                setTheme(!htmlElement.classList.contains('dark'));
-            });
-        }
-
-        // Navbar hide/show on scroll
-        const mainNav = document.getElementById('main-nav');
-        let lastScrollY = window.scrollY;
-
-        window.addEventListener('scroll', () => {
-            const currentScrollY = window.scrollY;
-            if (currentScrollY > lastScrollY && currentScrollY > 64) {
-                // Scrolling down - hide navbar
-                mainNav.classList.add('-translate-y-full');
-            } else {
-                // Scrolling up - show navbar
-                mainNav.classList.remove('-translate-y-full');
-            }
-            lastScrollY = currentScrollY;
-        });
-
-        // Mouse tracking spotlight effect
-        const pointerGlow = document.getElementById('pointer-glow');
-        document.addEventListener('mousemove', (e) => {
-            if (!pointerGlow) return;
-            const x = e.clientX;
-            const y = e.clientY;
-            const isDark = document.documentElement.classList.contains('dark');
-            const color = isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.04)';
-            pointerGlow.style.background = `radial-gradient(600px circle at ${x}px ${y}px, ${color}, transparent 40%)`;
-        });
-
-        // Volunteering carousels (multiple photos per job)
-        document.querySelectorAll('[data-carousel]').forEach((carousel) => {
-            const track = carousel.querySelector('.carousel-track');
-            const slides = carousel.querySelectorAll('.carousel-slide');
-            const dots = carousel.querySelectorAll('.carousel-dot');
-            const prevBtn = carousel.querySelector('.carousel-prev');
-            const nextBtn = carousel.querySelector('.carousel-next');
-            const total = slides.length;
-            let index = 0;
-
-            const update = () => {
-                track.style.transform = `translateX(-${index * 100}%)`;
-                dots.forEach((dot, i) => {
-                    dot.classList.toggle('opacity-100', i === index);
-                    dot.classList.toggle('opacity-40', i !== index);
-                });
-            };
-
-            if (prevBtn) {
-                prevBtn.addEventListener('click', () => {
-                    index = (index - 1 + total) % total;
-                    update();
-                });
-            }
-            if (nextBtn) {
-                nextBtn.addEventListener('click', () => {
-                    index = (index + 1) % total;
-                    update();
-                });
-            }
-            dots.forEach((dot, i) => {
-                dot.addEventListener('click', () => {
-                    index = i;
-                    update();
-                });
-            });
-        });
-    });
-</script>
+<script src="assets/js/scripts.js"></script>
 </body></html>
